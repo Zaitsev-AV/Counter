@@ -1,0 +1,45 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 3px solid #5a5560;
+    padding: 15px;
+    background: #5a5560;
+    box-shadow: 10px 5px 250px 20px #4bcffa;
+}
+.scoreboard {
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    border: 1px solid yellow;
+    font-size: 30px;
+    color: gold;
+}
+.scoreboard input {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #6bd550;
+    border-radius: 10px;
+    border: #6bd550 1px solid;
+    text-align: center;
+
+}
+
+.btn_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    border: 1px solid yellow;
+    border-radius: 15px;
+    width: 350px;
+    height: 80px;
+}

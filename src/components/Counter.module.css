@@ -1,0 +1,89 @@
+.wrapper {
+    display: grid;
+    grid-column: 2/3;
+}
+
+.scoreboard {
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    border: 1px solid yellow;
+    font-size: 100px;
+    color: gold;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    border: 1px solid yellow;
+    border-radius: 15px;
+    width: 350px;
+    height: 80px;
+}
+
+.error {
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    border: 5px solid red;
+    /*background-color: #ffa58b;*/
+    font-size: 80px;
+    color: red;
+    animation-name: error;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.dangerSpan {
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    /*border: 5px solid red;*/
+    animation-name: dangerSpan;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 43px;
+    /*margin-left: 20px;*/
+    color: red;
+}
+.danger {
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    border: 5px solid red;
+    animation-name: danger;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 43px;
+    /*margin-left: 20px;*/
+    color: red;
+}
+
+@keyframes error {
+    50% {
+        opacity: 0;
+    }
+}
+@keyframes danger {
+    50% {
+        opacity: 0;
+    }
+}
+@keyframes dangerSpan {
+    50% {
+        opacity: 0;
+    }
+}
+

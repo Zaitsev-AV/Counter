@@ -1,0 +1,129 @@
+.inc {
+    display: inline-block;
+    width: 125px;
+    height: 35px;
+    background-color: #faed26;
+    border: 1px solid #faed26;
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    /*box-shadow: 5px 3px 7px 5px wheat;*/
+    cursor: pointer;
+}
+
+.reset {
+    display: inline-block;
+    width: 125px;
+    height: 35px;
+    background-color: #e36d6a;
+    border: 1px solid #e36d6a;
+    border-radius: 10px;
+    margin: 15px;
+    color: white;
+    /*box-shadow: 5px 3px 7px 5px wheat;*/
+    cursor: pointer;
+}
+
+.inc:hover {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+    background-color: #c8e365;
+    border: 1px solid #c8e365;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.reset:hover {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+    background-color: firebrick;
+    border: 1px solid firebrick;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.inc:active {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    background-color: #6bd550;
+    border: 1px solid #6bd550;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.reset:active {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    background-color: hotpink;
+    border: 1px solid hotpink;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.set {
+    display: inline-block;
+    width: 125px;
+    height: 35px;
+    background-color: #ffa801;
+    border: 1px solid #ffa801;
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    /*box-shadow: 3px 2px 10px 2px black,*/
+    /*inset 7px 7px 15px 7px grey;*/
+    cursor: pointer;
+}
+
+.set:hover {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+    background-color: #ffa801;
+    border: 1px solid #ffa801;
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    /*box-shadow: 3px 2px 10px 2px black,*/
+    /*inset 3px 2px 10px 2px grey;*/
+    cursor: pointer;
+}
+
+.clear {
+    display: inline-block;
+    width: 125px;
+    height: 35px;
+    background-color: #7ed6df;
+    border: 1px solid #7ed6df;
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    /*box-shadow: 3px 2px 10px 2px black,*/
+    /*inset -7px 7px 15px 7px grey;*/
+    cursor: pointer;
+}
+
+.clear:hover {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    background-color: #7ed6df;
+    border: 1px solid #7ed6df;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 15px;
+    color: black;
+    /*box-shadow: 3px 2px 10px 2px black,*/
+    /*inset 7px 7px 15px 7px grey;;*/
+    cursor: pointer;
+}
