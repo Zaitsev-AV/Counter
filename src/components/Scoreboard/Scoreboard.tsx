@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Counter.module.css'
+import s from '../Counter/Counter.module.css'
 
 type ScoreboardProps = {
 	value: number

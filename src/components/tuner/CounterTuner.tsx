@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
 import s from './CounterTuner.module.css'
-import {Button} from "../Button";
+import {Button} from "../Button/Button";
 import {Input} from "./Input";
 
 type CounterTunerProps = {

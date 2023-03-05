@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import './App.css'
-import {Counter} from "./components/Counter";
+import {Counter} from "./components/Counter/Counter";
 import {CounterTuner} from "./components/tuner/CounterTuner";
 
 function App() {
