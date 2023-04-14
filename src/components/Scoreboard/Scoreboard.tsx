@@ -8,7 +8,7 @@ type ScoreboardProps = {
 };
 export const Scoreboard: React.FC<ScoreboardProps> = (props) => {
 
-	const {value,minCount,maxCount, ...otherProps} = props;
+	const {value,minCount,maxCount} = props;
 	return (
 		<div className={value < maxCount
 			?
