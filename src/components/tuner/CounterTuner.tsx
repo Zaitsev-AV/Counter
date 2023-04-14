@@ -1,31 +1,33 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, { ChangeEvent } from 'react';
 import s from './CounterTuner.module.css'
-import {Button} from "../Button/Button";
-import {Input} from "./Input";
+import { Button } from "../Button/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { SetMaxCountAC, SetMinCountAC, TunerType } from "../../redux/tunerReducer";
+import { RootStoreType } from "../../redux/store";
+import { IncrementCountAC } from "../../redux/counterReducer";
 
-type CounterTunerProps = {
-	maxCount: number
-	minCount: number
-	setMaxCount: (maxCount: number) => void
-	setMinCount: (minCount: number) => void
-	setCount: (count: number) => void
-};
-export const CounterTuner: React.FC<CounterTunerProps> = (props) => {
-	const {maxCount, minCount, setMinCount, setMaxCount, setCount, ...otherProps} = props
 
+export const CounterTuner: React.FC = () => {
+const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
+	const dispatch = useDispatch()
 	const onMaxCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
-		if (e.currentTarget.value) setMaxCount(+e.currentTarget.value)
+		// if (e.currentTarget.value) setMaxCount(+e.currentTarget.value)
+		dispatch(SetMaxCountAC(+e.currentTarget.value) )
 	}
 	const onMinCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
-		setMinCount(+e.currentTarget.value)
+		dispatch(SetMinCountAC(+e.currentTarget.value))
+		dispatch(IncrementCountAC(+e.currentTarget.value))
+		// setMinCount(+e.currentTarget.value)
 	}
 	const onClickSetButtonHandler = () => {
-		localStorage.setItem('key_countMax', JSON.stringify(maxCount))
-		localStorage.setItem('key_countMin', JSON.stringify(minCount))
-		setCount(minCount)
+		// localStorage.setItem('key_countMax', JSON.stringify(maxCount))
+		// localStorage.setItem('key_countMin', JSON.stringify(minCount))
+		// setCount(minCount)
 	}
 	const onClickClearButtonHandler = () => {
-		localStorage.clear()
+		dispatch(SetMaxCountAC(0))
+		dispatch(SetMinCountAC(0))
+		// localStorage.clear()
 	}
 
 	return (
@@ -35,7 +37,7 @@ export const CounterTuner: React.FC<CounterTunerProps> = (props) => {
 					<div>
 						Max
 						<input type="number"
-							   value={maxCount}
+							   value={state.maxCount}
 							   onChange={onMaxCountHandler}
 						/>
 						{/*<Input inputValue={maxCount}*/}
@@ -44,7 +46,7 @@ export const CounterTuner: React.FC<CounterTunerProps> = (props) => {
 					<div>
 						Min
 						<input type="number"
-							   value={minCount}
+							   value={state.minCount}
 							   onChange={onMinCountHandler}
 						/>
 						{/*<Input inputValue={minCount}*/}

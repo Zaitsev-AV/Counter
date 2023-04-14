@@ -69,36 +69,6 @@
     color: white;
     cursor: pointer;
 }
-
-.set {
-    display: inline-block;
-    width: 125px;
-    height: 35px;
-    background-color: #ffa801;
-    border: 1px solid #ffa801;
-    border-radius: 10px;
-    margin: 15px;
-    color: black;
-    /*box-shadow: 3px 2px 10px 2px black,*/
-    /*inset 7px 7px 15px 7px grey;*/
-    cursor: pointer;
-}
-
-.set:hover {
-    display: inline-block;
-    width: 150px;
-    height: 45px;
-    font-size: 15px;
-    background-color: #ffa801;
-    border: 1px solid #ffa801;
-    border-radius: 10px;
-    margin: 15px;
-    color: black;
-    /*box-shadow: 3px 2px 10px 2px black,*/
-    /*inset 3px 2px 10px 2px grey;*/
-    cursor: pointer;
-}
-
 .clear {
     display: inline-block;
     width: 125px;
@@ -126,4 +96,76 @@
     /*box-shadow: 3px 2px 10px 2px black,*/
     /*inset 7px 7px 15px 7px grey;;*/
     cursor: pointer;
+}
+.set {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.set:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.set:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.set::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.set:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }

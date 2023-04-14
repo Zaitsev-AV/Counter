@@ -5,11 +5,12 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    border: 3px solid #5a5560;
+    border: 3px solid rgba(12,4,10,0.22);
     padding: 15px;
-    background: #5a5560;
+    background:   #343E40;
     box-shadow: 10px 5px 250px 20px #4bcffa;
 }
+
 .scoreboard {
     display: grid;
     place-items: center;
