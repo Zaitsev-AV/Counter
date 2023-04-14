@@ -20,13 +20,14 @@ function App() {
 
 
 	return (
-	
-			<div className={ s.background }>
-				<div className={ s.app }>
-					<Counter />
-				</div>
-				<CounterTuner />
+		<div className={ s.background }>
+			<div className={ s.wrapper }>
+				<CounterTuner/>
+				<Counter/>
 			</div>
+		
+		</div>
+	
 	)
 }
 
