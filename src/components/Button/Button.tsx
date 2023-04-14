@@ -14,6 +14,6 @@ export const Button: React.FC<ButtonProps> = (props) => {
 	return (
 		<button onClick={callBack}
 				disabled={disabled}
-				className={typeBtn === 'inc' ? b.inc : typeBtn === 'res' ? b.reset : typeBtn === 'set' ? b.set : b.clear}>{children}</button>
+				className={disabled ? b.disabled : typeBtn === 'inc' ? b.inc : typeBtn === 'res' ? b.reset : typeBtn === 'set' ? b.set : b.clear}>{children}</button>
 	);
 };

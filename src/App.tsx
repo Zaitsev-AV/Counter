@@ -1,6 +1,7 @@
-import './App.css'
+import './App.module.css'
 import {Counter} from "./components/Counter/Counter";
 import {CounterTuner} from "./components/tuner/CounterTuner";
+import s from './App.module.css'
 
 
 function App() {
@@ -19,13 +20,13 @@ function App() {
 
 
 	return (
-		<>
-			<div className="App">
-				<Counter />
+	
+			<div className={ s.background }>
+				<div className={ s.app }>
+					<Counter />
+				</div>
+				<CounterTuner />
 			</div>
-			<CounterTuner />
-		</>
-
 	)
 }
 

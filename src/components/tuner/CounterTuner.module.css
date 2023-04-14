@@ -5,7 +5,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    border: 3px solid rgba(12,4,10,0.22);
+    border: 3px solid #343E40;
     padding: 15px;
     background:   #343E40;
     box-shadow: 10px 5px 250px 20px #4bcffa;
@@ -17,9 +17,9 @@
     border-radius: 15px;
     width: 350px;
     height: 200px;
-    border: 1px solid yellow;
+    border: 1px solid #5f937d;
     font-size: 30px;
-    color: gold;
+    color: #5f937d;
 }
 .scoreboard input {
     margin-left: 20px;
@@ -27,9 +27,9 @@
     width: 60px;
     height: 30px;
     font-size: 20px;
-    background-color: #6bd550;
+    background-color: #5f937d;
     border-radius: 10px;
-    border: #6bd550 1px solid;
+    border: #5f937d 1px solid;
     text-align: center;
 
 }
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 15px;
-    border: 1px solid yellow;
+    border: 1px solid #5f937d;
     border-radius: 15px;
     width: 350px;
     height: 80px;
