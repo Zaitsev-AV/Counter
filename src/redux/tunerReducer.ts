@@ -36,7 +36,7 @@ export const SetMinCountAC = ( minCount: number ) => {
 	} as const
 }
 //thunks
-export const setDataToLocalStorageTC = ( minCount: number, maxCount: number ) => ( dispatch: Dispatch ) => {
+export const setDataToLocalStorageTC = ( minCount: number, maxCount: number ) => () => {
 	localStorage.setItem( 'key_countMax',JSON.stringify(maxCount))
 	localStorage.setItem( 'key_countMin',JSON.stringify(minCount))
 }
