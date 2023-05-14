@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import s from './CounterTuner.module.css'
 import { Button } from "../Button/Button";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { setDataToLocalStorageTC, SetMaxCountAC, SetMinCountAC, TunerType } from "../../redux/tunerReducer";
 import { RootStoreType, useAppDispatch } from "../../redux/store";
 import { IncrementCountAC } from "../../redux/counterReducer";

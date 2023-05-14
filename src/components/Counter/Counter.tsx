@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Counter.module.css'
-import {Button} from "../Button/Button";
-import {Scoreboard} from "../Scoreboard/Scoreboard";
-import { useDispatch, useSelector } from "react-redux";
+import { Button } from "../Button/Button";
+import { Scoreboard } from "../Scoreboard/Scoreboard";
+import { useSelector } from "react-redux";
 import { RootStoreType, useAppDispatch } from "../../redux/store";
 import { TunerType } from "../../redux/tunerReducer";
 import { IncrementCountAC, ResetCountAC, StateType } from "../../redux/counterReducer";
