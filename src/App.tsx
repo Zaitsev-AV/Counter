@@ -2,21 +2,16 @@ import './App.module.css'
 import {Counter} from "./components/Counter/Counter";
 import {CounterTuner} from "./components/tuner/CounterTuner";
 import s from './App.module.css'
+import { useEffect } from "react";
+import { useAppDispatch } from "./redux/store";
+import { getDataToLocalStorageTC } from "./redux/tunerReducer";
 
 
 function App() {
-
-	// useEffect(() => {
-	// 	let getKyeMax = localStorage.getItem('key_countMax')
-	// 	let getKyeMin = localStorage.getItem('key_countMin')
-	// 	if (getKyeMax && getKyeMin) {
-	// 		let newCountMax = JSON.parse(getKyeMax)
-	// 		let newCountMin = JSON.parse(getKyeMin)
-	// 		// setMaxCount(newCountMax)
-	// 		// setMinCount(newCountMin)
-	// 		// setCount(newCountMin)
-	// 	}
-	// }, [])
+const dispatch = useAppDispatch()
+	useEffect(() => {
+		dispatch(getDataToLocalStorageTC())
+	}, [])
 
 
 	return (

@@ -1,8 +1,4 @@
-
-export type TunerType = {
-	maxCount: number
-	minCount: number
-}
+import { Dispatch } from "redux";
 
 const initialState: TunerType = {
 	maxCount: 0,
@@ -21,8 +17,7 @@ export const tunerReducer = (state: TunerType = initialState, action: ActionType
 			return state
 	}
 }
-
-type ActionType = ReturnType<typeof SetMaxCountAC> | ReturnType<typeof SetMinCountAC>
+//actions
 export const SetMaxCountAC = ( maxCount: number ) => {
 	return {
 		type: "SET-MAX-COUNT",
@@ -40,3 +35,28 @@ export const SetMinCountAC = ( minCount: number ) => {
 		}
 	} as const
 }
+//thunks
+export const setDataToLocalStorageTC = ( minCount: number, maxCount: number ) => ( dispatch: Dispatch ) => {
+	localStorage.setItem( 'key_countMax',JSON.stringify(maxCount))
+	localStorage.setItem( 'key_countMin',JSON.stringify(minCount))
+}
+
+export const getDataToLocalStorageTC = ( ) => ( dispatch: Dispatch ) => {
+	const getKyeMax = localStorage.getItem('key_countMax')
+	const getKyeMin = localStorage.getItem('key_countMin')
+	if (getKyeMax && getKyeMin) {
+		const newCountMax = JSON.parse( getKyeMax )
+		const newCountMin = JSON.parse( getKyeMin )
+		dispatch(SetMaxCountAC(newCountMax))
+		dispatch(SetMinCountAC(newCountMin))
+	}
+	
+}
+
+//types
+export type TunerType = {
+	maxCount: number
+	minCount: number
+}
+
+type ActionType = ReturnType<typeof SetMaxCountAC> | ReturnType<typeof SetMinCountAC>

@@ -2,14 +2,14 @@ import React, { ChangeEvent } from 'react';
 import s from './CounterTuner.module.css'
 import { Button } from "../Button/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { SetMaxCountAC, SetMinCountAC, TunerType } from "../../redux/tunerReducer";
-import { RootStoreType } from "../../redux/store";
+import { setDataToLocalStorageTC, SetMaxCountAC, SetMinCountAC, TunerType } from "../../redux/tunerReducer";
+import { RootStoreType, useAppDispatch } from "../../redux/store";
 import { IncrementCountAC } from "../../redux/counterReducer";
 
 
 export const CounterTuner: React.FC = () => {
 const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
-	const dispatch = useDispatch()
+	const dispatch = useAppDispatch()
 	const onMaxCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
 		// if (e.currentTarget.value) setMaxCount(+e.currentTarget.value)
 		dispatch(SetMaxCountAC(+e.currentTarget.value) )
@@ -20,6 +20,7 @@ const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
 		// setMinCount(+e.currentTarget.value)
 	}
 	const onClickSetButtonHandler = () => {
+		dispatch(setDataToLocalStorageTC(state.minCount, state.maxCount))
 		// localStorage.setItem('key_countMax', JSON.stringify(maxCount))
 		// localStorage.setItem('key_countMin', JSON.stringify(minCount))
 		// setCount(minCount)

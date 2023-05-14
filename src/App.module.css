@@ -32,7 +32,7 @@ body {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    box-shadow: 0 0 190px #FFD700, 0 0 100px #FFD700, 0 0 290px #FFD700, 0 0 450px #FFD700;
+    box-shadow: 0 0 190px #ff1500, 0 0 100px #FFD700, 0 0 290px #FFD700, 0 0 450px #ff7300;
     animation: glow 2s linear infinite;
 }
 
