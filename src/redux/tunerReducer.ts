@@ -1,5 +1,4 @@
 import { Dispatch } from "redux";
-import { IncrementCountAC } from "./counterReducer";
 
 const initialState: TunerType = {
 	maxCount: 0,
