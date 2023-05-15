@@ -1,8 +1,4 @@
 
-export type StateType = {
-	count: number
-}
-
 const initialState: StateType = {
 	count: 0
 }
@@ -20,8 +16,7 @@ export const counterReducer = (state: StateType = initialState, action: ActionTy
 	}
 }
 
-type ActionType = ReturnType<typeof IncrementCountAC> | ReturnType<typeof ResetCountAC>
-
+//actions
 export const IncrementCountAC = ( count: number ) => {
 	return {
 		type: "INCREMENT",
@@ -38,3 +33,9 @@ export const ResetCountAC = ( count: number ) => {
 		}
 	} as const
 }
+
+//types
+export type StateType = {
+	count: number
+}
+type ActionType = ReturnType<typeof IncrementCountAC> | ReturnType<typeof ResetCountAC>

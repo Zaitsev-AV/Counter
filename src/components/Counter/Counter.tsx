@@ -17,10 +17,8 @@ export const Counter: React.FC= () => {
 
 	const disMax = stateCounter.count === stateTuner.maxCount;
 	const disMin = stateCounter.count === stateTuner.minCount;
-	// setCount(minCount=count)
 	const increment = () => {
 		dispatch(IncrementCountAC(stateCounter.count))
-		// setCount(count + 1)
 	}
 	const reset = () => {
 		dispatch(ResetCountAC(stateTuner.minCount))
@@ -32,7 +30,6 @@ export const Counter: React.FC= () => {
 						maxCount={stateTuner.maxCount}
 						minCount={stateTuner.minCount}
 			/>
-			{/*{disMax && <div className={s.danger}>{count}</div>}*/}
 			<div className={s.buttons}>
 				<Button callBack={increment}
 						disabled={disMax}

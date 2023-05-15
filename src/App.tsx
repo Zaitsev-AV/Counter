@@ -23,7 +23,6 @@ const dispatch = useAppDispatch()
 		
 		</div>
 	
-	)
-}
+	)}
 
 export default App

@@ -1,4 +1,5 @@
 import { Dispatch } from "redux";
+import { IncrementCountAC } from "./counterReducer";
 
 const initialState: TunerType = {
 	maxCount: 0,
@@ -59,4 +60,6 @@ export type TunerType = {
 	minCount: number
 }
 
-type ActionType = ReturnType<typeof SetMaxCountAC> | ReturnType<typeof SetMinCountAC>
+type ActionType =
+	| ReturnType<typeof SetMaxCountAC>
+	| ReturnType<typeof SetMinCountAC>

@@ -11,19 +11,14 @@ export const CounterTuner: React.FC = () => {
 const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
 	const dispatch = useAppDispatch()
 	const onMaxCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
-		// if (e.currentTarget.value) setMaxCount(+e.currentTarget.value)
 		dispatch(SetMaxCountAC(+e.currentTarget.value) )
 	}
 	const onMinCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
 		dispatch(SetMinCountAC(+e.currentTarget.value))
 		dispatch(IncrementCountAC(+e.currentTarget.value))
-		// setMinCount(+e.currentTarget.value)
 	}
 	const onClickSetButtonHandler = () => {
 		dispatch(setDataToLocalStorageTC(state.minCount, state.maxCount))
-		// localStorage.setItem('key_countMax', JSON.stringify(maxCount))
-		// localStorage.setItem('key_countMin', JSON.stringify(minCount))
-		// setCount(minCount)
 	}
 	const onClickClearButtonHandler = () => {
 		dispatch(SetMaxCountAC(0))
@@ -41,8 +36,6 @@ const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
 							   value={state.maxCount}
 							   onChange={onMaxCountHandler}
 						/>
-						{/*<Input inputValue={maxCount}*/}
-						{/*	   callBack={onMaxCountHandler}/>*/}
 					</div>
 					<div>
 						Min
@@ -50,8 +43,6 @@ const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
 							   value={state.minCount}
 							   onChange={onMinCountHandler}
 						/>
-						{/*<Input inputValue={minCount}*/}
-						{/*	   callBack={() => onMinCountHandler}/>*/}
 					</div>
 
 				</div>

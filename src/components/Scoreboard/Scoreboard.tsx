@@ -10,7 +10,7 @@ export const Scoreboard: React.FC<ScoreboardProps> = (props) => {
 
 	const {value,minCount,maxCount} = props;
 	return (
-		<div className={value < maxCount
+		<div className={value < maxCount && value >= minCount
 			?
 			s.scoreboard
 			:
