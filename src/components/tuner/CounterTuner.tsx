@@ -15,7 +15,7 @@ const state = useSelector<RootStoreType, TunerType>(state => state.tuner)
 	}
 	const onMinCountHandler = (e: ChangeEvent<HTMLInputElement>) => {
 		dispatch(SetMinCountAC(+e.currentTarget.value))
-		dispatch(IncrementCountAC(+e.currentTarget.value))
+		dispatch(IncrementCountAC(+e.currentTarget.value - 1))
 	}
 	const onClickSetButtonHandler = () => {
 		dispatch(setDataToLocalStorageTC(state.minCount, state.maxCount))
